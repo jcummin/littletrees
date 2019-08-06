@@ -118,7 +118,7 @@ jobs:
 
             - run:
                 name: install dev dependencies, build assets, etc.
-                command: ./.ci/scripts/01-prepare
+                command: bash ./.ci/scripts/01-prepare
 
             - run:
                 name: build assets
