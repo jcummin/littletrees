@@ -1,0 +1,44 @@
+id: adw_search
+robots_file_contents : |
+  Sitemap:
+  User-agent: *
+
+  # Misc
+  Disallow: /*?*
+  Allow: /*?itok=*
+  Allow: /*?v=*
+  Allow: /*.css?
+  Allow: /*.js?
+
+  # JS/CSS
+  Allow: /core/*.css$
+  Allow: /core/*.js$
+  # Directories
+  Disallow: /core/
+  Disallow: /profiles/
+  # Files
+  Disallow: /README.txt
+  Disallow: /web.config
+  # Paths (clean URLs)
+  Disallow: /admin/
+  Disallow: /comment/reply/
+  Disallow: /filter/tips/
+  Disallow: /node/add/
+  Disallow: /search/
+  Disallow: /user/register/
+  Disallow: /user/password/
+  Disallow: /user/login/
+  Disallow: /user/logout/
+  # Paths (no clean URLs)
+  Disallow: /index.php/admin/
+  Disallow: /index.php/comment/reply/
+  Disallow: /index.php/filter/tips/
+  Disallow: /index.php/node/add/
+  Disallow: /index.php/search/
+  Disallow: /index.php/user/password/
+  Disallow: /index.php/user/register/
+  Disallow: /index.php/user/login/
+  Disallow: /index.php/user/logout/
+sitemap_txt_content_types:
+sitemap_txt_additional_pages:
+sitemap_txt_omit_pages:
