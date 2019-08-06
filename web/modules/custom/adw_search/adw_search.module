@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Clean up default meta tags, sitemap output
+ */
+
+/**
  * Implements hook_preprocess_sitemap().
  */
 function adw_search_preprocess_sitemap(&$variables) {

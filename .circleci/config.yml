@@ -126,7 +126,7 @@ jobs:
 
             - run:
                 name: prepare database for site-under test
-                command: ./.ci/scripts/02-init-site-under-test-clone-existing
+                command: bash ./.ci/scripts/02-init-site-under-test-clone-existing
                 # command: ./.ci/scripts/02-init-site-under-test-reinstall-new
 
             - run:
@@ -135,19 +135,19 @@ jobs:
 
             - run:
                 name: run functional tests with Behat
-                command: ./.ci/scripts/03-test
+                command: bash ./.ci/scripts/03-test
 
             - run:
                 name: post-test actions
-                command: ./.ci/scripts/04-post-test
+                command: bash ./.ci/scripts/04-post-test
 
             - run:
                 name: handle merge to master (if needed)
-                command: ./.ci/scripts/05-merge-master
+                command: bash ./.ci/scripts/05-merge-master
 
             - run:
                 name: remove transient test fixtures
-                command: ./.ci/scripts/09-cleanup-fixtures
+                command: bash ./.ci/scripts/09-cleanup-fixtures
 
     composer_lock_updater:
         <<: *defaults
@@ -181,7 +181,7 @@ jobs:
 
             - run:
                 name: visual regression test
-                command: ./.ci/visual-regression-test.sh
+                command: bash ./.ci/visual-regression-test.sh
 
             - store_artifacts:
                 path: /tmp/artifacts
